@@ -4,19 +4,19 @@ Repository to showcase how to use Redis Streams in a Spring Boot app. Also publi
 consumers
 
 ## Structure
-- /demo: Spring Boot App to produce stream events and consume them
-- /lib: Helper library to use product and consume from/to Redis Streams.
+- `/demo`: Spring Boot App to produce stream events and consume them
+- `/lib`: Helper library to use product and consume from/to Redis Streams.
 
 
 ## Demo Contents
-- config/RedisConfiguration.kt: sets up the Redis configuration (host and port)
-- consumer/ProductCreatedConsumer.kt: example implementation of the RedisStreamConsumer interface
-- producer/ProductCreatedProducer.kt: example implementation of the RedisStreamProducer interface
-- route/StreamTestRoute.kt: entrypoint route to publish to the stream
+- `config/RedisConfiguration.kt`: sets up the Redis configuration (host and port)
+- `consumer/ProductCreatedConsumer.kt`: example implementation of the RedisStreamConsumer interface
+- `producer/ProductCreatedProducer.kt`: example implementation of the RedisStreamProducer interface
+- `route/StreamTestRoute.kt`: entrypoint route to publish to the stream
 
 ## Demo configuration
 
-See src/main/resources/application.yml to see how to setup this app
+See [demo/src/main/resources/application.yml](https://github.com/austral-ingsis/class-redis-streams/blob/main/demo/src/main/resources/application.yml) to see how to setup this app
 
 ## Using the helper library
 
