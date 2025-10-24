@@ -12,7 +12,7 @@ import reactor.core.publisher.Flux
 import java.net.InetAddress
 
 
-abstract class RedisStreamConsumer<Value>(
+abstract class RedisStreamConsumer<Value : Any>(
     protected val streamKey: String,
     protected val groupId: String,
     private val redis: RedisTemplate<String, String>

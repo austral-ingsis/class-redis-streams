@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.8.21'
-    id 'org.jetbrains.kotlin.plugin.spring' version '1.8.21'
+    id 'org.jetbrains.kotlin.jvm' version '2.2.20'
+    id 'org.jetbrains.kotlin.plugin.spring' version '2.2.20'
     id 'maven-publish'
 }
 
@@ -42,11 +42,6 @@ java {
     withSourcesJar()
 }
 
-task sourceJar(type: Jar) {
-    classifier 'sources'
-    from sourceSets.main.allSource
-}
-
 
 publishing {
     repositories {
@@ -68,7 +63,6 @@ publishing {
             version = "0.1.${System.getenv("BUILD_NUMBER")}"
 
             from(components.kotlin)
-            artifact tasks.sourceJar
         }
     }
 }
